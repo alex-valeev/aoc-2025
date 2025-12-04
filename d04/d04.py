@@ -5,7 +5,6 @@ TEST = "test.txt"
 INPUT = "input.txt"
 PAPER = "@"
 SPACE = "."
-REMOVED = "+"
 MAX_ROLLS = 4
 
 
@@ -37,23 +36,9 @@ def part2(file: str) -> int:
             for x in range(w):
                 if data[y][x] == PAPER and roll_access(data=data, x_point=x, y_point=y):
                     rolls_of_paper += 1
-                    data[y][x] = REMOVED
-
-        clear_space(data)
+                    data[y][x] = SPACE
 
     return rolls_of_paper
-
-
-def clear_space(data: List[List[str]]):
-    h: int = len(data)
-    w: int = len(data[0])
-
-    for y in range(h):
-        for x in range(w):
-            if data[y][x] == REMOVED:
-                data[y][x] = SPACE
-
-    return
 
 
 def roll_access(data: List[List[str]], x_point: int, y_point: int) -> bool:
