@@ -1,7 +1,7 @@
 from tools import read_file_row
 
-TEST = 'test.txt'
-INPUT = 'input.txt'
+TEST = "test.txt"
+INPUT = "input.txt"
 
 
 def part1(file: str) -> int:
@@ -9,7 +9,7 @@ def part1(file: str) -> int:
     invalid_id: int = 0
 
     for period in data:
-        period_from, period_to = map(int, period.split('-'))
+        period_from, period_to = map(int, period.split("-"))
 
         start = int(10 ** (len(str(period_from)) // 2))
         if len(str(period_from)) % 2 == 1:
@@ -33,7 +33,7 @@ def part2(file: str) -> int:
     invalid_id: int = 0
 
     for period in data:
-        period_from, period_to = map(int, period.split('-'))
+        period_from, period_to = map(int, period.split("-"))
 
         for id in range(period_from, period_to + 1):
             id_str = str(id)
@@ -47,13 +47,13 @@ def part2(file: str) -> int:
     return invalid_id
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("---------")
-    print("TEST DATA")
+    print("TEST")
     print(f"part1 = {part1(TEST)}")
     print(f"part2 = {part2(TEST)}")
     print("---------")
-    print("INPUT DATA")
+    print("INPUT")
     print(f"part1 = {part1(INPUT)}")
     print(f"part2 = {part2(INPUT)}")
     print("---------")

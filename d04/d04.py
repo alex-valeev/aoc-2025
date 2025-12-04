@@ -1,11 +1,11 @@
 from typing import List
 from tools import read_file_labyrinth
 
-TEST = 'test.txt'
-INPUT = 'input.txt'
-PAPER = '@'
-SPACE = '.'
-REMOVED = '+'
+TEST = "test.txt"
+INPUT = "input.txt"
+PAPER = "@"
+SPACE = "."
+REMOVED = "+"
 MAX_ROLLS = 4
 
 
@@ -72,7 +72,7 @@ def roll_access(data: List[List[str]], x_point: int, y_point: int) -> bool:
     return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("---------")
     print("TEST")
     print(f"part1 = {part1(TEST)}")

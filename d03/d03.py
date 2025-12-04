@@ -1,7 +1,7 @@
 from tools import read_file_column
 
-TEST = 'test.txt'
-INPUT = 'input.txt'
+TEST = "test.txt"
+INPUT = "input.txt"
 
 
 def part1(file: str) -> int:
@@ -31,7 +31,7 @@ def find_max_num(bank: str, radix: int) -> int:
     return int(''.join(joltage))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("---------")
     print("TEST")
     print(f"part1 = {part1(TEST)}")
