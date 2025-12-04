@@ -1,11 +1,11 @@
-from tools import parse_file
+from tools import read_file_column
 
 TEST = "test.txt"
 INPUT = "input.txt"
 
 
 def part1(file: str) -> int:
-    data = parse_file(file)
+    data = read_file_column(file)
     position: int = 50
     password: int = 0
 
@@ -28,7 +28,7 @@ def part1(file: str) -> int:
 
 
 def part2(file: str) -> int:
-    data = parse_file(file)
+    data = read_file_column(file)
     position: int = 50
     password: int = 0
     prev_pos: int = 50
@@ -63,11 +63,11 @@ def part2(file: str) -> int:
 
 if __name__ == "__main__":
     print("---------")
-    print("TEST DATA")
+    print("TEST")
     print(f"part1 = {part1(TEST)}")
     print(f"part2 = {part2(TEST)}")
     print("---------")
-    print("INPUT DATA")
+    print("INPUT")
     print(f"part1 = {part1(INPUT)}")
     print(f"part2 = {part2(INPUT)}")
     print("---------")

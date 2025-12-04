@@ -1,1 +1,1 @@
-from .tools import parse_file
+from .tools import read_file_column, read_file_row
