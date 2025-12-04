@@ -23,8 +23,8 @@ def find_max_num(bank: str, radix: int) -> int:
     idx: int = -1
 
     for b in range(len(joltage)):
-        for i in range(idx + 1, len(bank)):
-            if bank[i] > joltage[b] and len(joltage) - b <= len(bank) - i:
+        for i in range(idx + 1, len(bank) - len(joltage) + b + 1):
+            if bank[i] > joltage[b]:
                 joltage[b] = bank[i]
                 idx = i
 
